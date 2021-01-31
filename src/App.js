@@ -1,22 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import balanceContext from './BalanceContext'
+import Parent from './components/hierarchy/Parent';
+import React from 'react'
+import {store} from './redux/store/store';
+import {Provider} from 'react-redux'
+import Cakecontainer from './containers/CakeContainer'
 
 function App() {
+  const [val, setVal] = React.useState(10);
   return (
     <div className="App">
+      
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Provider store={store}>
+          <h1>app.js</h1>
+           <Cakecontainer /> 
+        </Provider>
+      {/* <balanceContext.Provider value={[val, setVal]}>
+        <h1>Home page  {val}</h1>
+        <Parent></Parent>
+      </balanceContext.Provider> */}
       </header>
     </div>
   );
