@@ -16,7 +16,7 @@ class Cakecontainer extends Component {
 }
 const mapStateToProps = (state)=>{
     return{
-        cake:state
+        cake:state.cake
     }
 }
 

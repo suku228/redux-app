@@ -1,0 +1,5 @@
+export const FETCH_REQUEST = 'FETCH_REQUEST'
+
+export const SUCCESS_RESPONSE = 'SUCCESS_RESPONSE'
+
+export const FAIL_RESP = 'FAIL_RESP'

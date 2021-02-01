@@ -8,9 +8,9 @@ const initialState = {
 export const cakeReducer = (state = initialState, actions)=>{
     console.log(state, actions)
     switch(actions.type){
-        case 'BUY_CAKE':
+        case BUY_CAKE:
             return {count:state.count-1};
-        case 'MAKE_A_CAKE':
+        case MAKE_A_CAKE:
             return {count:state.count+1}
         default : 
         return state;
